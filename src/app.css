@@ -1,0 +1,130 @@
+/*
+ * CS2 Weapons Catalog — Tema oscuro estilo gaming.
+ *
+ * Decisiones de diseño:
+ * - Dark theme: reduce fatiga visual y encaja con la estética CS2
+ * - Variables CSS: permite cambiar la paleta completa desde un solo lugar
+ * - Responsive: mobile-first con breakpoints en 640px y 1024px
+ */
+
+:root {
+	/* Paleta principal */
+	--bg-primary: #0f1117;
+	--bg-secondary: #1a1d27;
+	--bg-card: #212533;
+	--bg-card-hover: #282c3d;
+	--bg-input: #1a1d27;
+
+	/* Texto */
+	--text-primary: #e8eaf0;
+	--text-secondary: #8b90a0;
+	--text-muted: #5a5f72;
+
+	/* Acentos */
+	--accent: #e6a817;
+	--accent-hover: #f0b820;
+	--accent-dark: #c48f14;
+	--green: #4caf50;
+	--red: #e53935;
+	--blue: #4a9eff;
+
+	/* Bordes */
+	--border: #2a2e3a;
+	--border-light: #353a4a;
+
+	/* Rarity colors (CS2) */
+	--rarity-common: #b0c3d9;
+	--rarity-uncommon: #5e98d9;
+	--rarity-rare: #4b69ff;
+	--rarity-mythical: #8847ff;
+	--rarity-legendary: #d32ce6;
+	--rarity-ancient: #eb4b4b;
+	--rarity-gold: #e6a817;
+
+	/* Espaciado */
+	--radius: 8px;
+	--radius-sm: 4px;
+	--radius-lg: 12px;
+
+	/* Fuente */
+	--font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+	--font-mono: 'Cascadia Code', 'Fira Code', monospace;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16px;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font);
+	background: var(--bg-primary);
+	color: var(--text-primary);
+	line-height: 1.6;
+	min-height: 100vh;
+}
+
+a {
+	color: var(--accent);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--accent-hover);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+button {
+	cursor: pointer;
+	font-family: inherit;
+}
+
+/* Utilidades */
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+/* Badge de rareza */
+.rarity-badge {
+	display: inline-block;
+	padding: 0.15rem 0.5rem;
+	border-radius: var(--radius-sm);
+	font-size: 0.7rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+/* Scrollbar gaming */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--border-light);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--text-muted);
+}
