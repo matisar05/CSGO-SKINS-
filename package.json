@@ -5,6 +5,8 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
+		"dev:expo": "cd app-expo && npx expo start",
+		"dev:all": "concurrently --raw -n sveltekit,expo -c yellow,blue \"vite dev --host\" \"cd app-expo && npx expo start\"",
 		"build": "vite build",
 		"preview": "vite preview",
 		"images": "npx tsx scripts/download-weapon-images.ts"
@@ -13,6 +15,7 @@
 		"@sveltejs/adapter-auto": "^4.0.0",
 		"@sveltejs/kit": "^2.20.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
+		"concurrently": "^10.0.3",
 		"svelte": "^5.0.0",
 		"tsx": "^4.0.0",
 		"typescript": "^5.0.0",
